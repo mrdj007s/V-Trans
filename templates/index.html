@@ -1,0 +1,740 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- basic -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- mobile metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <!-- site metas -->
+  <title>Index</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <!-- style css -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- Responsive-->
+  <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+  <!-- fevicon -->
+  <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+  <!-- Tweaks for older IEs-->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+    media="screen">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.80.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+    integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+    integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+    crossorigin="anonymous"></script>
+  <title>V_TRANS</title>
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+  <!-- Bootstrap core CSS -->
+  <link type=" text/css" href="{% static 'css/carousel.css' %}" rel="stylesheet">
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand , btn " href="/index">V-TRANS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/vehicle">Book Vehicle</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <style>
+              body {
+                font-family: 'Lato', sans-serif;
+              }
+
+              .overlay {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgb(0, 0, 0);
+                background-color: rgba(0, 0, 0, 0.9);
+                overflow-x: hidden;
+                transition: 0.5s;
+              }
+
+              .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+              }
+
+              .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+              }
+
+              .overlay a:hover,
+              .overlay a:focus {
+                color: #f1f1f1;
+              }
+
+              .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+              }
+
+              @media screen and (max-height: 450px) {
+                .overlay a {
+                  font-size: 20px
+                }
+
+                .overlay .closebtn {
+                  font-size: 40px;
+                  top: 15px;
+                  right: 35px;
+                }
+              }
+            </style>
+            <body>
+
+              <div id="myNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content">
+                  <a href="/signupmodel" data-bs-toggle="modal" data-bs-target="#signupModal">Sign In</a>
+                  <a href="/loginmodel" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</a>
+                  <a href="/forgotmodel" data-bs-toggle="modal" data-bs-target="#forgotmodel">Forgot Password</a>
+                  <a href="#">Log Out</a>
+                </div>
+              </div>
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+              <script>
+                function openNav() {
+                  document.getElementById("myNav").style.width = "100%";
+                }
+
+                function closeNav() {
+                  document.getElementById("myNav").style.width = "0%";
+                }
+              </script>
+
+            </body>
+        </div>
+        </form>
+      </div>
+      </div>
+    </nav>
+    <hr>
+
+    <!--loginModal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            
+            <form method="POST" action="{% url 'login' %}">
+              {% csrf_token %}
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input name="useremail" type="email" class="form-control" id="exampleInputEmail1"
+                  aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input name="userpassword" type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--forgot model-->
+    <div class="modal fade" id="forgotmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Forgot Password</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" method="POST">
+              {% csrf_token %}
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Email-Id</label>
+                <input type="text" class="form-control" id="validationDefault02" name="emailid" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Phone No.</label>
+                <input type="text" class="form-control" id="validationDefault02" name="phoneno" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label"> New Password</label>
+                <input type="text" class="form-control" id="validationDefault02" name="password" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label"> Re-Enter New Password</label>
+                <input type="text" class="form-control" id="validationDefault02" name="password" required>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-primary" href="/index2" type="submit">Login</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--signupModal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Signup!!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" method="POST">
+              {% csrf_token %}
+              <div class="col-md-6">
+                <label for="validationDefault01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationDefault01" name="fname" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationDefault02" name="lname" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Email-Id</label>
+                <input type="text" class="form-control" id="validationDefault02" name="emailid" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Phone No.</label>
+                <input type="text" class="form-control" id="validationDefault02" name="phoneno" required>
+              </div>
+              <div class="col-md-6">
+                <label for="validationDefault02" class="form-label">Password</label>
+                <input type="text" class="form-control" id="validationDefault02" name="password" required>
+              </div>
+              <div class="col-md-5">
+                <label for="validationDefault04" class="form-label">City</label>
+                <select class="form-select" id="validationDefault04" name="city" required>
+                  <option selected disabled value="">Choose City</option>
+                  <option>Surat</option>
+                  <option>Rajkot</option>
+                  <option>Ahmedabad</option>
+                  <option>Bhavnagar</option>
+                  <option>Porbandar</option>
+                  <option>Navsari</option>
+                  <option>Mehsana</option>
+                  <option>Bombay</option>
+                  <option>Pune</option>
+                  <option>Udaipur</option>
+                  <option>Jaipur</option>
+                  <option>Indore</option>
+                  <option>Patna</option>
+                  <option>Madurai</option>
+                </select>
+              </div>
+              <div class="col-md-5">
+                <label for="validationDefault04" class="form-label">State</label>
+                <select class="form-select" id="validationDefault04" name="state" required>
+                  <option selected disabled value="">Choose State</option>
+                  <option>Gujarat</option>
+                  <option>Maharastra</option>
+                  <option>Rajasthan</option>
+                  <option>Goa</option>
+                  <option>Tamilnadu</option>
+                  <option>Odisha</option>
+                  <option>Madhyapradesh</option>
+                  <option>Bihar</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label for="validationDefault05" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="validationDefault05" name="zipcode" required>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+                  <label class="form-check-label" for="invalidCheck2">
+                    Agree to terms and conditions
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary" href="/index2" type="submit">Sign Up</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/index/first.jpg' %}" class="d-block w-100" alt="..." style="height: 510px;">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1 style="color:rgb(11, 129, 133)"><b>BOOK YOUR VEHICLE TODAY</b></h1>
+              <p>Moving the way you want. </p>
+              <p><a class="btn btn-lg btn-primary" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up
+                  today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/index/second.jpg' %}" class="d-block w-100" alt="..." style="height: 510px;">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 style="color: blanchedalmond;">We fulfill all your expectation.</h1>
+              <p style="color: black;"><b>We provide verity of services.....</b></p>
+              <p><a class="btn btn-lg btn-primary" href="/services/">Services</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/index/third.jpg' %}" class="d-block w-100" alt="..." style="height: 510px;">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="100%" height="100%" fill="#777" />
+          </svg>
+
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1 style="color: black;"><b>Explore with us</b></h1>
+              <p style="color: black;"><b>View our truck collcetions here....</b></p>
+              <p><a class="btn btn-lg btn-primary" href="/gallery/" name="gallery">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
+  ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/1st.jpg' %}" height="200px" width="270px">
+          <h2>TATA ACE</h2>
+          <p>TATA ACE is a Pick up truck, with payload-850KG</p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tataace" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/2nd.jpg' %}" height="200px" width="270px">
+
+          <!--tata ace view detail  Modal -->
+
+          <div class="modal fade" id="tataace" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">TATA ACE</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>The standard Ace HT is powered by a two-cylinder 702 cc engine, delivering 16 hp (12 kW) at 3200
+                    rpm
+                    and a torque of 3.8 kgf⋅m (37 N⋅m) at 2000 rpm.</p>
+                  <p>It has a permissible loading capacity of 750 kg
+                    (1650
+                    lb).</p>
+                  <p>It is equipped with a four-speed manual gearbox and has a top speed of 60 km/h (37 mph). </p>
+                  <p>The Ace
+                    HT has a modern cabin compared to its three-wheeler rivals. It is best suited for carrying goods
+                    over
+                    short distances.</p>
+
+                  <p>The Ace EX adds a five-speed gearbox, stop-start and larger wheels (13" over 12") and wider tires
+                    (155
+                    rather than 145), and a top speed of 70 km/h.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2>Mahindra Bolero</h2>
+          <p>Mahindra Bolero 'Pik-up' vehicle boosting its range of commercial vehicles and it's also India's first
+            pick-up vehicle to have a payload capacity of 1,700 kilograms.
+          </p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#mahindrabolero" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/3rd.jpg' %}" height="200px" width="270px">
+
+          <!-- mahindra bolero view detail  Modal -->
+          <div class="modal fade" id="mahindrabolero" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Mahindra Bolero</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Mahindra Bolero 'Pik-up' vehicle boosting its range of commercial vehicles and it's also India's
+                    first
+                    pick-up vehicle to have a payload capacity of 1,700 kilograms.</p>
+                  <p>It is powered by the 72 PS (53 kW) 2523 cc turbo-charged direct injection diesel engine, although
+                    the
+                    new, cleaner M2DiCR has also been an option and in earlier years Peugeot engines were also fitted.
+                  </p>
+                  Drive is manual with 4WD optional, power steering is available.</p>
+                  <p>Default tyres are 235/75 R15 Goodyear
+                    Wrangler radials.</p>
+                  <p>Mileage 12.2 km/L (8.2 L/100 km; 29 mpg‑US) fuel economy in city with AC. Mileage 14
+                    km/L (7.1 L/100 km; 33 mpg‑US) fuel economy on highway at around 80 to 100 km/h with AC.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2>Eicher Pro 1110</h2>
+          <p>Echer pro 1110 Gross Vehicle Weight (GVW) standing at 11,950 kg including kerb weight of 3,848 kg, thus
+            making the payload
+            capacity 8,102 kg.</p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#eicherpro" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/4th.jpg' %}" height="200px" width="270px">
+          <!--eicher pro 1110 view detail  Modal -->
+
+          <div class="modal fade" id="eicherpro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Eicher Pro 1110</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Echer pro 1110 Gross Vehicle Weight (GVW) standing at 11,950 kg including kerb weight of 3,848 kg,
+                    thus making the payload
+                    capacity 8,102 kg.</p>
+                  <p>The vehicle comes with an excellent payload capacity of nine tonnes, which means the truck can be
+                    used
+                    to carry a lot of carriage and cargo.</p>
+                  <p>The ground clearance and the wheelbase of the vehicle are 220 mm
+                    and 5,050 mm respectively.</p>
+                  <p>The truck is powered by a 3.3-litre engine that belts out a maximum power of 135 bhp, coming at
+                    2,600
+                    rpm, and the peak torque is 450 Nm, coming at a range of 1,200-1,800 rpm.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>SML ISUZU Truck</h2>
+          <p>SML ISUZU SAMRAT BS-IV is available With the GVW of 10250 kg, the truck has high payload carrying capacity
+            of 7050 kg. </p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#isuzu" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/5th.jpg' %}" height="200px" width="270px">
+
+          <!--SML ISUZU view detail  Modal -->
+          <div class="modal fade" id="isuzu" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">SML ISUZU Truck</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>SML Isuzu SAMRAT BS-IV is available in the CAB and half deck body types and wheelbase variant –
+                    4760 mm. Also, it has a day cabin and deck chassis.</p>
+                  <p>With the GVW of 10250 kg, the truck has high
+                    payload carrying capacity of 7050 kg.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>TATA Intra</h2>
+          <p>The new Tata Intra comes with bold styling, premium features and a superior payload capacity of 1100 kg.
+          </p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tataintra" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img src="{% static 'images/index_card/6th.jpg' %}" height="200px" width="270px">
+
+          <!--tata intra view detail  Modal -->
+          <div class="modal fade" id="tataintra" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">TATA Intra</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>The Tata Intra is a 1 Ton diesel mini truck aimed for Intra City Applications and Last Mile
+                    Distribution, it has a loading deck length of 2630 mm (the longest in its class) and a top speed of
+                    125 km/h (78 mph).</p>
+                  <p>The Super Ace has a miserly turning radius of 5.1 m and boasts a mileage of 14
+                    km/L (8.75 mpl), which gives it maximum range of 440 km per its 38 L fuel tank.</p>
+                  <p>It has a three-way
+                    drop load body which provides a mere 60 cm height for comfortable loading and unloading.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h2>TATA ICV Truck</h2>
+          <p>The range caters to diverse application segments with ease and efficiency to provide the optimum balance
+            between performance and economics.</p>
+          <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tataicv" href="#">View details
+              &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <!--tata intra view detail  Modal -->
+        <div class="modal fade" id="tataicv" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">TATA ICV Truck</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p>The standard Ace HT is powered by a two-cylinder 702 cc engine, delivering 16 hp (12 kW) at 3200
+                  rpm
+                  and a torque of 3.8 kgf⋅m (37 N⋅m) at 2000 rpm.</p>
+                <p>It has a permissible loading capacity of 750 kg
+                  (1650
+                  lb).</p>
+                <p>It is equipped with a four-speed manual gearbox and has a top speed of 60 km/h (37 mph). </p>
+                <p>The Ace
+                  HT has a modern cabin compared to its three-wheeler rivals. It is best suited for carrying goods
+                  over
+                  short distances.</p>
+
+                <p>The Ace EX adds a five-speed gearbox, stop-start and larger wheels (13" over 12") and wider tires
+                  (155
+                  rather than 145), and a top speed of 70 km/h.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Book your vehicle with us... <span class="text-muted">It’ll blow your
+              mind.</span>
+          </h2>
+          <p class="lead">We provide verity of truck to transfer any types of goods and material. </p>
+        </div>
+        <div class="col-md-5">
+          <img src="{% static 'images/1st_feature.png' %}" height="450px" width="450px">
+
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Advance Booking, <span class="text-muted">Book for your needs</span></h2>
+          <p class="lead">Our vehicle availability is guaranteed on daily/weekly/monthly basis to ensure on-time
+            reporting.</p>
+        </div>
+        <div class="col-md-5 order-md-1">
+          <img src="{% static 'images/2nd_feature.webp' %}" height="450px" width="450px">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Transparent Pricing.... <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">With our fare calculator, we instantaneously give you best possible rates online..</p>
+        </div>
+        <div class="col-md-5">
+          <img src="{% static 'images/3rd_feature.jpg' %}" height="450px" width="450px">
+        </div>
+      </div>
+      <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
+    <hr>
+    <!--  footer -->
+    <footr>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 offset-md-3">
+              <ul class="sociel">
+                <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li> <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                <li> <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="contact">
+                <h3>V-Trans</V-Trans>
+                </h3>
+                <span>We Are Here......
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="contact">
+                <h3>Conatct Us</h3>
+                <span>Vraj Villa, Sarthana jakatnaka<br>
+                  Varachha, Surat
+                  <p>+91 81603 53720</p>
+                  <p>+91 87807 60314</p>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+              <div class="contact">
+                <h3>Customer Service</h3>
+                <ul class="lik">
+                  <li> <a href="#">Terms and conditions</a></li>
+                  <li> <a href="#">Privacy and policy</a></li>
+                  <li> <a href="#">Online payment terms</a></li>
+                  <li> <a href="#">RTO forms download</a></li>
+                  <li> <a href="#">Technical support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
+        </div>
+    </footr>
+    <!-- end footer -->
+  </main>
+</body>
+</html>
