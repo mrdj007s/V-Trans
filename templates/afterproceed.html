@@ -34,7 +34,6 @@
 </head>
 
 <body>
-
     <hr>
     <form class="row g-3" method="POST" action="{% url 'index2' %}">
         {% csrf_token %}
@@ -48,14 +47,7 @@
         </div>
         <div class="alert alert-warning alert-dismissible fade show" id="demo" role="alert">
             <strong>
-                <h5>Amount :- {{payment}}</h5>
-                <!--<p id="one"></p>
-                <a href="#" onclick="random()">payment</a>
-                <script>
-                    function random() {
-                        document.getElementById("one").innerHTML = Math.floor(Math.random() * 8000);
-                    }
-                </script>-->
+                <h5>Amount :- {{payment}} </h5>
                 </strong> payable amount... Thank you.
         </div>
         <div id="form-container">

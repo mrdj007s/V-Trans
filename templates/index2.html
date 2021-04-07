@@ -57,6 +57,7 @@
       -moz-user-select: none;
       user-select: none;
     }
+
     @media (min-width: 768px) {
       .bd-placeholder-img-lg {
         font-size: 3.5rem;
@@ -64,12 +65,18 @@
     }
   </style>
 
-
   <!-- Custom styles for this template -->
   <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
 </head>
 
 <body>
+  {% for message in messages %}
+  <script>
+    window.onload = function () {
+      alert('{{message}}')
+    }
+  </script>
+  {% endfor %}
   <header>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <div class="container-fluid">
@@ -155,6 +162,7 @@
               }
             }
           </style>
+
           <body>
             <div id="myNav" class="overlay">
               <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -179,12 +187,11 @@
       </div>
     </nav>
     <hr>
-    <li><strong>Welcome</strong>{{ useremail }}</li>
+    <li><strong>Welcome</strong></li>
     <hr>
   </header>
 
   <main>
-
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -248,7 +255,6 @@
       </button>
     </div>
 
-
     <!-- Marketing messaging and featurettes
   ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -259,7 +265,7 @@
       <div class="row">
         <div class="col-lg-4">
           <img src="{% static 'images/index_card/1st.jpg' %}" height="200px" width="270px">
-      
+
           <h2>TATA ACE</h2>
           <p>TATA ACE is a Pick up truck, with payload-850KG</p>
           <p><a class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tataace" href="#">View details
@@ -540,7 +546,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
               <div class="contact">
                 <h3>V-Trans</h3>
-                <span>We Are Here...                 
+                <span>We Are Here...
                 </span>
               </div>
             </div>

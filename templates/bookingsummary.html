@@ -68,7 +68,8 @@
 
 <body>
     <main>
-        <form class="row g-3" method="POST" action="{% url 'afterproceed' %}">
+        <!---->
+        <form class="row g-3" method="POST" action="{% url 'pay' %}">
             {% csrf_token %}
             <div class="container">
                 <div class="table-responsive text-nowrap">
@@ -80,6 +81,7 @@
                                 <th scope="col">Pick Up location</th>
                                 <th scope="col">Drop location</th>
                                 <th scope="col">Truck</th>
+                                <th scope="col">Labour</th>
                                 <th scope="col">Date</th>
                                 <th scope="col">Goods type</th>
                                 <th scope="col">Weight</th>
@@ -92,6 +94,7 @@
                             <td>{{ proceed.pickuplocation }}</td>
                             <td>{{ proceed.droplocation }}</td>
                             <td>{{ proceed.trucktype }}</td>
+                            <td>{{ proceed.labour }}</td>
                             <td>{{ proceed.pickupdate }}</td>
                             <td>{{ proceed.goodstype }}</td>
                             <td>{{ proceed.weight }}</td>
@@ -99,7 +102,9 @@
                         {% endfor %}
                     </table>
                 </div>
-                <button class="btn btn-primary"  type="submit">Payment</button>
+                <div>
+                    <button class="btn btn-primary" type="submit">Payment</button>
+                </div>
             </div>
         </form>
         <hr>
@@ -158,4 +163,5 @@
         <!-- end footer -->
     </main>
 </body>
+
 </html>

@@ -1,7 +1,6 @@
 from django.db import models
 from django.conf import settings
-
-
+from django.utils import timezone
 
 # Create your models here.
 
@@ -28,39 +27,28 @@ class bookvehicle(models.Model):
 
 
 class proceed(models.Model):
-    #book = models.ForeignKey(bookvehicle, on_delete=models.CASCADE )
     pickuplocation=models.CharField(max_length=100)
     droplocation=models.CharField(max_length=100)
     trucktype=models.CharField(max_length=100)
+    labour=models.CharField(max_length=10, default='')
     pickupdate=models.CharField(max_length=100)
     goodstype=models.CharField(max_length=100)
     weight=models.IntegerField()
     
-
     def __str__(self):
         return self.pickupdate
 
 class summary(models.Model):
-    #book = models.ForeignKey(bookvehicle, on_delete=models.CASCADE )
     pickuplocation=models.CharField(max_length=100)
     droplocation=models.CharField(max_length=100)
     trucktype=models.CharField(max_length=100)
+    labour=models.CharField(max_length=10, default='')
     pickupdate=models.CharField(max_length=100)
     goodstype=models.CharField(max_length=100)
     weight=models.IntegerField()
 
     def __str__(self):
         return self.pickupdate
-
-#class order(models.Model):
-  #  user=models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-   # book = models.ManyToManyField(proceed)
-    #start_date = models.DateTimeField(auto_now_add=True)
-    #book_date = models.DateTimeField()
-    #booked = models.BooleanField(default=False)
-
-    #def __str__(self):
-        #return self.user
 
 
 class contactus(models.Model):
@@ -93,7 +81,6 @@ class trucks(models.Model):
         return self.truck_name
 
 class payment(models.Model):
-    #samount=models.IntegerField()
     cardnumber=models.IntegerField()
     holdername=models.CharField(max_length=20)
     exp_month=models.IntegerField()
@@ -102,3 +89,14 @@ class payment(models.Model):
 
     def __str__(self):
         return self.cardnumber
+
+class Transaction(models.Model):
+    made_on = models.DateTimeField(auto_now_add=True)
+    amount = models.IntegerField()
+    order_id = models.CharField(unique=True, max_length=100, null=True, blank=True)
+    checksum = models.CharField(max_length=100, null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.order_id is None and self.made_on and self.id:
+            self.order_id = self.made_on.strftime('PAY2ME%Y%m%dODR') + str(self.id)
+        return super().save(*args, **kwargs)
