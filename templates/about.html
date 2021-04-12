@@ -58,7 +58,7 @@
                      <div class="collapse navbar-collapse" id="navbarCollapse">
                         <ul class="navbar-nav me-auto mb-2 mb-md-0">
                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/index2">Home</a>
+                              <a class="nav-link active" aria-current="page" href="#">Home</a>
                            </li>
                            <li class="nav-item">
                               <a class="nav-link active" aria-current="page" href="/vehicle">Book Vehicle</a>
@@ -191,14 +191,20 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="contact">
                      <h3>V-Trans</h3>
-                     <span>We Are Here...
+                     <span>V-Trans is a portal that
+                      allows a customer to book
+                      a truck online. V-Trans is
+                      a Logistics aggregator offerin
+                      On-demand Transportation solutions
+                      to a cater to goods movement in
+                      both Full load & Part load segment.
                      </span>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="contact">
                      <h3>Conatct Us</h3>
-                     <span>Vraj Villa, Sarthana jakatnaka<br>
+                     <span>
                         Varachha, Surat
                         <p>+91 81603 53720</p>
                         <p>+91 87807 60314</p>
@@ -209,33 +215,30 @@
                   <div class="contact">
                      <h3>Services</h3>
                      <ul class="lik">
-                        <li> <a href="/services"> Full Load Services</a></li>
-                        <li> <a href="/services">Transparent Pricing</a></li>
-                        <li> <a href="/services">Advance Booking</a></li>
-                        <li> <a href="/services">Quick & Easy Portal</a></li>
-                        <li> <a href="#">Trusted Services</a></li>
+                        <li> <a href="/vehicle"> Full Load Services</a></li>
+                        <li> <a href="#">Transparent Pricing</a></li>
+                        <li> <a href="/vehicle">Advance Booking</a></li>
+                        <li> <a href="#">Quick & Easy Portal</a></li>
+                        <li> <a href="/about">Trusted Services</a></li>
+                     </ul>
                   </div>
                </div>
-               <form class="row g-3" method="POST">
-                  {% csrf_token %}
-                  <div class="col-xl-12 col-lg-5 col-md-7 col-sm-12">
-                     <div class="contact">
-                        <h3>Inquiry</h3>
-                        <input type="text" class="form-control" placeholder="Enter name" name="name" required>
-                        <input type="text" class="form-control" placeholder="Enter Email-Id" name="email" required>
-                        <input type="text" class="form-control" placeholder="Enter Mobile Number" name="mno" required>
-                        <input type="text" class="form-control" placeholder="Type a Message Here...." name="msg"
-                           required>
-                        <button class="btn btn-outline-info" herf="#" type="submit">SUBMIT</button>
-
-                     </div>
-               </form>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                  <div class="contact">
+                     <h3>Quick Links</h3>
+                     <ul class="lik">
+                        <li> <a href="{% url 'terms' %}">Terms and conditions</a></li>
+                        <li> <a href="{% url 'privacy' %}">Privacy and policy</a></li>
+                        <li> <a href="{% url 'faq' %}">FAQ</a></li>
+                        <li> <a href="{% url 'payterms' %}">Online payment terms</a></li>
+                        <li> <a href="/about">Technical support</a></li>
+                  </div>
+               </div>
             </div>
          </div>
-      </div>
-      <div class="copyright">
-         <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
-      </div>
+         <div class="copyright">
+            <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
+         </div>
    </footr>
    <!-- end footer -->
    <!-- Javascript files-->

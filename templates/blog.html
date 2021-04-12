@@ -57,7 +57,7 @@
                         <div class="collapse navbar-collapse" id="navbarCollapse">
                            <ul class="navbar-nav me-auto mb-2 mb-md-0">
                               <li class="nav-item">
-                                 <a class="nav-link active" aria-current="page" href="/index2">Home</a>
+                                 <a class="nav-link active" aria-current="page" href="#">Home</a>
                               </li>
                               <li class="nav-item">
                                  <a class="nav-link active" aria-current="page" href="/vehicle">Book Vehicle</a>
@@ -193,14 +193,20 @@
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="contact">
                      <h3>V-Trans</h3>
-                     <span>We Are Here...
+                     <span>V-Trans is a portal that
+                      allows a customer to book
+                      a truck online. V-Trans is
+                      a Logistics aggregator offerin
+                      On-demand Transportation solutions
+                      to a cater to goods movement in
+                      both Full load & Part load segment.
                      </span>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="contact">
                      <h3>Conatct Us</h3>
-                     <span>Vraj Villa, Sarthana jakatnaka<br>
+                     <span>
                         Varachha, Surat
                         <p>+91 81603 53720</p>
                         <p>+91 87807 60314</p>
@@ -211,23 +217,23 @@
                   <div class="contact">
                      <h3>Services</h3>
                      <ul class="lik">
-                        <li> <a href="/services"> Full Load Services</a></li>
-                        <li> <a href="/services">Transparent Pricing</a></li>
-                        <li> <a href="/services">Advance Booking</a></li>
-                        <li> <a href="/services">Quick & Easy Portal</a></li>
-                        <li> <a href="#">Trusted Services</a></li>
+                        <li> <a href="/vehicle"> Full Load Services</a></li>
+                        <li> <a href="#">Transparent Pricing</a></li>
+                        <li> <a href="/vehicle">Advance Booking</a></li>
+                        <li> <a href="#">Quick & Easy Portal</a></li>
+                        <li> <a href="/about">Trusted Services</a></li>
                      </ul>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                   <div class="contact">
-                     <h3>Customer Service</h3>
+                     <h3>Quick Links</h3>
                      <ul class="lik">
-                        <li> <a href="#">Terms and conditions</a></li>
-                        <li> <a href="#">Privacy and policy</a></li>
-                        <li> <a href="#">Online payment terms</a></li>
-                        <li> <a href="#">RTO forms download</a></li>
-                        <li> <a href="#">Technical support</a></li>
+                        <li> <a href="{% url 'terms' %}">Terms and conditions</a></li>
+                        <li> <a href="{% url 'privacy' %}">Privacy and policy</a></li>
+                        <li> <a href="{% url 'faq' %}">FAQ</a></li>
+                        <li> <a href="{% url 'payterms' %}">Online payment terms</a></li>
+                        <li> <a href="/about">Technical support</a></li>
                   </div>
                </div>
             </div>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Summary</title>
+    <title>Online Payment Terms</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -43,7 +43,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
         integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
         crossorigin="anonymous"></script>
-    <title>Payment Page</title>
+    <title>V_TRANS</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
     <!-- Bootstrap core CSS -->
     <link type=" text/css" href="{% static 'css/carousel.css' %}" rel="stylesheet">
@@ -62,35 +62,58 @@
             }
         }
     </style>
+
+
     <!-- Custom styles for this template -->
     <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+
+
 </head>
 
 <body>
-    <h2>Payment Page</h2>
-    <hr>
-    <form method="post">
-        {% csrf_token %}
-        <!--<input for="amount" name="amount">Amount:-</input>-->
+    <div class="container-sm">
+        <h1><b>Online Payment <span class="text-muted"> Terms</span></b></h1>
+        <hr>
+    </div>
+    <div class="container">
+        <h2><mark>Terms For Online Payment</mark></h2>
+        <div class="container-sm">
 
-        Amount:- <input type="number" name="amount" value="100">
-        <!--<button onclick="myFunction()">Try it</button>
-
-        <p id="demo"></p>
-
-        <script>
-            function myFunction() {
-                document.getElementById("demo").innerHTML = Math.random();
-            }
-        </script>-->
-        
-        <div>
+            <p>All on-line payments made towards availing Services shall be taken into consideration only when the
+                relevant
+                amount is received and credited in the Company's bank account. The User booking for the Service shall
+                pay
+                all amounts including but not limited to the fare (as agreed), parking charges, additional night
+                surcharge
+                (where applicable) and any fee or levy presently payable or hereinafter imposed by the law or required
+                to be
+                paid for availing of the Services. User authorizes the Company to retain any consignments that are
+                booked
+                till all dues of the Company are recovered. The User agrees and accepts that the use of the Services
+                provided by the Company is at its sole risk, and further acknowledges that the Company disclaims all
+                representations and warranties of any kind, whether express or implied. In case of cancellation of the
+                booking, after making on-line payment, refund of the amount shall be paid within 30 working days after
+                the
+                said amount is received and credited in company's bank account. A small amount of service charge may be
+                levied on such cancellations as per Company Policy from time to time. In case of any payment transaction
+                undertaken by the user or any third party using the credentials of the user, which later on is found to
+                be a
+                fraudulent one, Company will not be responsible for any such transaction and all the legal liability
+                including all costs and expenses of such transaction will be that of the user whose credentials are used
+                for
+                such transaction and will be recovered by the Company or the payment collection agency as the case may
+                be.
+                In order to avoid such circumstances users are advised to ensure that their credentials are not misused
+                by
+                any third party at any point of time. All the charges specified by the Company are excluding any taxes
+                (local or union) unless informed otherwise. For any refund amount of cancellation please contact us in
+                our
+                Customer care no +91 8160353720 or on our email ID:transv38@gmail.com</p>
             <hr>
-            <input type="submit" name="submit" value="Make Payment" required>
         </div>
-    </form>
-    <hr>
-    <!--footr start-->
+    </div>
+
+    <!--footer start-->
     <footr>
         <div class="footer">
             <div class="container">
@@ -156,7 +179,5 @@
                 <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
             </div>
     </footr>
-    <!-- end footer -->
+    <!--footer end-->
 </body>
-
-</html>

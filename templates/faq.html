@@ -1,9 +1,267 @@
+{% load static %}
 <!DOCTYPE html>
 
+<html>
+
 <head>
-   <title>FAQ Page</title> 
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>FAQ</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static 'images/fevicon.png' %}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+    <!-- Tweaks for older IEs-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+        integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+        integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+        crossorigin="anonymous"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <!-- Bootstrap core CSS -->
+    <link type=" text/css" href="{% static 'css/carousel.css' %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/carousel.css' %}" rel="stylesheet">
+    <style>
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+    </style>
 </head>
 
 <body>
-    <h2>FAQ Page</h2>
+    <div class="container-sm">
+        <h2>FAQ</h2>
+    </div>
+    
+    <div class="container-sm">
+        <hr>
+        <button class="accordion">How to book a Truck online with V-Trans?</button>
+        <div class="panel">
+            <p>V-Trans offers an online transport booking service around the country to individuals and businesses. The
+                material types that are mostly transported from various locations through road transport are Trailer
+                Transport, FMCG Transporter, Textile & Garments, Manufacturing, Cosmetics, Solar Panel, Construction
+                Plastic, Chemical, Ceramics and more.
+                This transport company we offer highly affordable transport services combined with complete security of
+                goods through insurance assistance, vehicle tracking, easy online payments and more. We also allow the
+                customers to choose the vehicle of their choice following the material to be transported. You just need
+                to check on the website for online truck booking, provide location details and proceed with further
+                details of material for full truck booking or part load truck that suits your requirements. You can
+                avail our highly professional services through controlled prices, secure movement of goods with tracking
+                services and safe delivery.</p>
+        </div>
+
+        <button class="accordion">Why should I choose V-Trans for transport service?</button>
+        <div class="panel">
+            <p>V-Trans is known for presenting the customers with safe, convenient and goods transportation service in
+                India. We help the clients to manage all your daily transport-related issues through the truck booking
+                services. We have come up with an exclusive platform for the customers to get a trouble-free and
+                affordable movement of consignments to different locations around the nation.
+                Now searching for the best transporters in your city would be easy as Trukky is all set to serve the
+                customers with safe and affordable transportation of goods. The instant pricing mechanism built through
+                the system providing real-time pricing. The easy payment system from the time of loading till delivering
+                is helping in saving the cost of transportation to a greater extent. The tracking facility helps in
+                monitoring the trip from the loading till unloading on the dropoff location. The support facility is
+                available 24/7 to help you in any of your need with professionalism.</p>
+        </div>
+
+        <button class="accordion">What type of Services does V-Trans provide?</button>
+        <div class="panel">
+            <p>Trukky provides services in full Truck and a part load truck for business and personal requirement. We
+                have come up with an exclusive platform for the customers to get a trouble-free and affordable movement
+                of consignments to different locations around the nation. From business to personal goods movement,
+                Trukky provides the lowest prices for movement of goods including the extra discounts and insurance on
+                cheapest rates.</p>
+            <p>We are serving with more than 3000 vehicles including trucks, lorries, trailers serving in over 100
+                cities in the country. The heavy vehicle types we serve are 40 feet Containers,10 tyre Single Axle,8 Ton
+                Truck,18 Ton Truck,20 Ton Truck etc. the customers can choose a perfect option according to the material
+                they need to transport. The part load facility helps you in saving cost through shared load truck
+                facility available subject to the dimensions of the material you need to upload and deliver.</p>
+        </div>
+
+        <button class="accordion">How will I pay for Truck booking online?</button>
+        <div class="panel">
+            <p>V-Trans provides the simplest way of booking transportation on the cheapest rates with quality services.
+                You do not need to pay anything while booking, partial or full payment can be made at the time of
+                loading and the remaining amount can be paid at the time of unloading. The multiple modes of payment
+                facility help the users in making secure transactions through the system.</p>
+            <p>All on-line payments made towards availing Services shall be taken into consideration only when the
+                relevant amount is received and credited in the Company's bank account. The User booking for the Service
+                shall pay all amounts including the fare, parking charges, additional night surcharge if applicable and
+                any fee or levy presently payable or hereinafter imposed by the law or required to be paid for availing
+                of the Services.</p>
+        </div>
+        <button class="accordion">How can I insure my goods during the trip?</button>
+        <div class="panel">
+            <p>V-trans provides insurance services for securing and ensuring the safe movement of the material and the
+                goods. You can avail the insurance services by contacting the customer services whiling booking a trip.
+                You can now keep your goods secured through insurance at very low price.
+                It is important to think about safety while transporting goods therefore, make sure that the service
+                providers offer insurance assistance features with the transport service through best transporters. This
+                will help you stay calm and assured about the safety of your goods.</p>
+        </div>
+        <button class="accordion">Do you provide Parcel, bike, courier or car transport service?</button>
+        <div class="panel">
+            <p>We only provide full truck transport services, we do not provide services for courier, parcels or car
+                transportation.</p>
+        </div>
+        <button class="accordion">Who will contact me for my booking or after placing a call back request ?</button>
+        <div class="panel">
+            <p>V-Trans does not shares client data to any other agencies, one of our executive will call you back
+                to verify your information. After confirmation of details, customer has to deposit booking amount only
+                in V-Trans account for final vehicle placement. For any queries related to booking kindly email us
+                at transv38@gmail.com or call 8160353720</p>
+        </div>
+        <button class="accordion">What are the Payment terms?</button>
+        <div class="panel">
+            <p>In case of Advance booking customers have to pay a token amount via NEFT / IMPS / PAYTM for booking
+                confirmation.
+
+                Once the truck arrives pickup location customers has to pay 80% or 90 % at the time of loading and
+                balance amount at the time of arrival before unloading.</p>
+        </div>
+        <button class="accordion">Can I change the vehicle type after it has reached the pick-up point?</button>
+        <div class="panel">
+            <p>You can change the vehicle type after it has reached its pick-up destination at an extra cost. You will
+                be charged a cancellation fee as per the company terms and conditions.</p>
+        </div>
+        <hr>
+    </div>
+
+    <!--footer start-->
+    <footr>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <ul class="sociel">
+                            <li> <a href="https://www.facebook.com/" style="color: white;"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li> <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                            <li> <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="contact">
+                            <h3>V-Trans</h3>
+                            <span>V-Trans is a portal that
+                                allows a customer to book
+                                a truck online. V-Trans is
+                                a Logistics aggregator offerin
+                                On-demand Transportation solutions
+                                to a cater to goods movement in
+                                both Full load & Part load segment.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="contact">
+                            <h3>Conatct Us</h3>
+                            <span>
+                                Varachha, Surat
+                                <p>+91 81603 53720</p>
+                                <p>+91 87807 60314</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="contact">
+                            <h3>Services</h3>
+                            <ul class="lik">
+                                <li> <a href="/vehicle"> Full Load Services</a></li>
+                                <li> <a href="#">Transparent Pricing</a></li>
+                                <li> <a href="/vehicle">Advance Booking</a></li>
+                                <li> <a href="#">Quick & Easy Portal</a></li>
+                                <li> <a href="/about">Trusted Services</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="contact">
+                            <h3>Quick Links</h3>
+                            <ul class="lik">
+                                <li> <a href="{% url 'terms' %}">Terms and conditions</a></li>
+                                <li> <a href="{% url 'privacy' %}">Privacy and policy</a></li>
+                                <li> <a href="{% url 'faq' %}">FAQ</a></li>
+                                <li> <a href="{% url 'payterms' %}">Online payment terms</a></li>
+                                <li> <a href="/about">Technical support</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
+            </div>
+    </footr>
+    <!--footer end-->
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
 </body>
+
+</html>

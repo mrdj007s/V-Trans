@@ -74,7 +74,7 @@
                         <a class="nav-link active" aria-current="page" href="/about">About Us</a>
                     </li>
                 </ul>
-                
+
             </div>
         </div>
     </nav>
@@ -131,8 +131,8 @@
                                 Please enter a message in the textarea.
                             </div>
                             <h5 style="opacity: 0.3;">Enter Labour </h5>
-                            <input type="number" class="form-control" value="1" placeholder="Enter Labour" id="validationDefault01"
-                                name="labour" required>
+                            <input type="number" class="form-control" value="1" placeholder="Enter Labour"
+                                id="validationDefault01" name="labour" required>
                             </input>
                             <div class="invalid-feedback">
                                 Please enter a message in the textarea.
@@ -159,8 +159,8 @@
                                 Please enter a message in the textarea.
                             </div>
                             <h5 style="opacity: 0.3;">Enter Weight</h5>
-                            <input type="number" class="form-control" value="10" placeholder="Weight in KG" id="validationDefault01"
-                                name="weight" required>
+                            <input type="number" class="form-control" value="10" placeholder="Weight in KG"
+                                id="validationDefault01" name="weight" required>
                             </input>
                             <div class="invalid-feedback">
                                 Please enter a message in the textarea.
@@ -202,63 +202,69 @@
     <!--  footer -->
     <footr>
         <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 offset-md-3">
-                        <ul class="sociel">
-                            <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
-                            <li> <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
-                            <li> <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="contact">
-                            <h3>V-Trans</h3>
-                            <span>We Are Here...
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="contact">
-                            <h3>Conatct Us</h3>
-                            <span>Vraj Villa, Sarthana jakatnaka<br>
-                                Varachha, Surat
-                                <p>+91 81603 53720</p>
-                                <p>+91 87807 60314</p>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="contact">
-                            <h3>Services</h3>
-                            <ul class="lik">
-                                <li> <a href="/services"> Full Load Services</a></li>
-                                <li> <a href="/services">Transparent Pricing</a></li>
-                                <li> <a href="/services">Advance Booking</a></li>
-                                <li> <a href="/services">Quick & Easy Portal</a></li>
-                                <li> <a href="#">Trusted Services</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                        <div class="contact">
-                            <h3>Customer Service</h3>
-                            <ul class="lik">
-                                <li> <a href="#">Terms and conditions</a></li>
-                                <li> <a href="#">Privacy and policy</a></li>
-                                <li> <a href="#">Online payment terms</a></li>
-                                <li> <a href="#">RTO forms download</a></li>
-                                <li> <a href="#">Technical support</a></li>
-                        </div>
-                    </div>
-                </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <ul class="sociel">
+                  <li> <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                  <li> <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter"></i></a></li>
+                  <li> <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+              </div>
             </div>
-            <div class="copyright">
-                <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
+            <div class="row">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                  <h3>V-Trans</h3>
+                  <span>V-Trans is a portal that
+                    allows a customer to book
+                    a truck online. V-Trans is
+                    a Logistics aggregator offerin
+                    On-demand Transportation solutions
+                    to a cater to goods movement in
+                    both Full load & Part load segment.
+                  </span>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                  <h3>Conatct Us</h3>
+                  <span>
+                    Varachha, Surat
+                    <p>+91 81603 53720</p>
+                    <p>+91 87807 60314</p>
+                  </span>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                  <h3>Services</h3>
+                  <ul class="lik">
+                    <li> <a href="/vehicle"> Full Load Services</a></li>
+                    <li> <a href="#">Transparent Pricing</a></li>
+                    <li> <a href="/vehicle">Advance Booking</a></li>
+                    <li> <a href="#">Quick & Easy Portal</a></li>
+                    <li> <a href="/about">Trusted Services</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <div class="contact">
+                  <h3>Quick Links</h3>
+                  <ul class="lik">
+                    <li> <a href="{% url 'terms' %}">Terms and conditions</a></li>
+                    <li> <a href="{% url 'privacy' %}">Privacy and policy</a></li>
+                    <li> <a href="{% url 'faq' %}">FAQ</a></li>
+                    <li> <a href="{% url 'payterms' %}">Online payment terms</a></li>
+                    <li> <a href="/about">Technical support</a></li>
+                </div>
+              </div>
             </div>
-    </footr>
+          </div>
+          <div class="copyright">
+            <p style="text-align: center;"><b>Copyright 2021 All Right Reserved By "V-Trans"</b></p>
+          </div>
+      </footr>
     <!-- end footer -->
 </body>
 

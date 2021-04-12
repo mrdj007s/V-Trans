@@ -18,20 +18,27 @@ from .forms import (
     ProceedForm,
     ContactForm,
     summaryForm,
-    PaymentForm
+    PaymentForm,
 )
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from v_trans import settings
 from django.contrib.auth import authenticate
 import random
-import random
 from django.contrib import messages
 from django.template import RequestContext
+
 #paytm
 from .models import Transaction
-from .paytm import generate_checksum, verify_checksum
+from .paytm import(
+    generate_checksum,
+    verify_checksum
+)
 from django.views.decorators.csrf import csrf_exempt
+
+#shortcut
+
+from django.shortcuts import render
 
 # Create your views here.
 def index(request):
@@ -39,20 +46,16 @@ def index(request):
         signupfrm=SignupForm(request.POST)
         if signupfrm.is_valid():
             signupfrm.save()
-            #useremail='sodvadiya789@gmail.com'
-            #rec=[useremail,]
-            #subject='Sing up success'
-            #message="Your Singup success"
-            #email_from=settings.EMAIL_HOST_USER
-            #send_mail(subject,message,email_from,rec)
+            send_mail('Mail From V-Trans', 'Youre are Sucessfully Signup with us!!!','transv38@gmail.com',['dipsodvadiya112@gmail.com'])
             
             return redirect('index2')
-            #messages.info(request, 'You are sucessfully sign up with us!!!')
+            messages.info(request, 'You are sucessfully sign up with us!!!')
         else:
             print ('something went wrong.... in sign up')
     else:
         signupfrm=SignupForm()
     return render(request,'index.html',{'signupfrm':signupfrm})
+
 
 def login(request):   
     if request.method=='POST':
@@ -80,9 +83,10 @@ def logout(request):
 
 
 def index2(request):
+    messages.info(request,'Successfully Register with')
     return render(request,"index2.html",)
     
-@login_required
+
 def vehicle(request):
     if request.session.has_key('useremail'):
         messages.error(request,'please login or singin')
@@ -94,20 +98,17 @@ def vehicle(request):
                 return redirect('checkfare')
                 print('vehicle book successfully!!')
             else:
-                print('something went wrong')
+                print('something went wrong in Vehicle views')
         else:
             bvehiclefrm=BookvehicleForm()
         return render(request,'vehicle.html',{'bvehiclefrm':bvehiclefrm})
     else:
         print("Please Login First!!!!")
+        messages.error(request,'Please register yourself first!!!!')
         return redirect('index')
 
 def services(request):
-    if request.session.has_key('useremail'):
-        return render(request,'services.html')
-    else:
-        print ("something wrong here in services")
-        return redirect('/')
+    return render(request,'services.html')
 
 def about(request):
     if request.method=="POST":
@@ -122,6 +123,7 @@ def about(request):
     return render(request,'about.html',{'contactfrm':contactfrm})
 
 
+@login_required
 def checkfare(request):
     if request.method=='POST':
         proceedfrm=ProceedForm(request.POST)
@@ -136,7 +138,7 @@ def checkfare(request):
     bookingdata = proceed.objects.all().order_by('-id')[:1]
     return render(request,'checkfare.html',{'proceedfrm':proceedfrm})
 
-
+@login_required
 def bookingsummary(request):
         if request.method=='POST':
             summaryfrm=summaryForm(request.POST)
@@ -157,19 +159,6 @@ def blog(request):
     return render(request,'blog.html')
 
 
-def afterproceed(request):
-    if request.method=='POST':
-        paymentfrm=PaymentForm(request.POST)
-        payment=random.randint(2000,5000)
-        if paymentfrm.is_valid():
-            paymentfrm.save()
-            print("payment sucessfully done!!")
-            return redirect('index2')
-        else:
-            print("payment not complated, something uncondtinaliy exception here...")
-    else:
-        paymentfrm=PaymentForm()
-    return render(request,'afterproceed.html',{'paymentfrm':paymentfrm,'payment':payment})
 
 def forgot(request):
     return render(request,'forgot.html')
@@ -186,18 +175,23 @@ def terms(request):
 def privacy(request):
     return render(request,'privacy.html')
 
+def payterms(request):
+    return render(request, 'payterms.html')
+
+
 #paytm 
 
 def initiate_payment(request):
     if request.method == "GET":
-        payment1=random.randint(2000,5000)
         return render(request, 'pay.html')
     try:
+       
         amount = int(request.POST['amount'])
+       
     except:
         return render(request, 'pay.html', context={'error': 'Wrong Accound Details or amount'})
 
-    transaction = Transaction.objects.create(amount=amount)
+    transaction = Transaction.objects.create( amount=amount)
     transaction.save()
     merchant_key = settings.PAYTM_SECRET_KEY
 
@@ -241,6 +235,7 @@ def callback(request):
         is_valid_checksum = verify_checksum(paytm_params, settings.PAYTM_SECRET_KEY, str(paytm_checksum))
         if is_valid_checksum:
             received_data['message'] = "Checksum Matched"
+            messages.info(request, 'Your Booking successfully!!')
         else:
             received_data['message'] = "Checksum Mismatched"
             return render(request, 'callback.html', context=received_data)
