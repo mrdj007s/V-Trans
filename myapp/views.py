@@ -4,6 +4,9 @@ from django.shortcuts import (
     redirect,
     #render_to_response
 )
+
+#models
+
 from .models import (
     bookvehicle, 
     proceed,
@@ -12,6 +15,9 @@ from .models import (
     payment,
 )
 from .models import signup
+
+#forms
+
 from .forms import (
     SignupForm,
     BookvehicleForm,
@@ -20,6 +26,9 @@ from .forms import (
     summaryForm,
     PaymentForm,
 )
+
+##others
+
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from v_trans import settings
@@ -84,9 +93,9 @@ def logout(request):
 
 def index2(request):
     messages.info(request,'Successfully Register with')
-    return render(request,"index2.html",)
+    return render(request,"index2.html")
     
-
+@login_required
 def vehicle(request):
     if request.session.has_key('useremail'):
         messages.error(request,'please login or singin')
@@ -157,11 +166,6 @@ def bookingsummary(request):
 
 def blog(request):
     return render(request,'blog.html')
-
-
-
-def forgot(request):
-    return render(request,'forgot.html')
 
 def gallery(request):
     return render (request, 'gallery.html')

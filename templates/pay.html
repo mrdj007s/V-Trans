@@ -67,13 +67,15 @@
 </head>
 
 <body>
-    <h2>Payment Page</h2>
+    <div class="container">
+    <h2>Payment <span class="text-muted">Page</span> </h2>
     <hr>
+    
     <form method="post">
         {% csrf_token %}
         <!--<input for="amount" name="amount">Amount:-</input>-->
 
-        Amount:- <input type="number" name="amount" value="100">
+        Amount:- <input type="number" name="amount" value="5872">
         <!--<button onclick="myFunction()">Try it</button>
 
         <p id="demo"></p>
@@ -86,9 +88,10 @@
         
         <div>
             <hr>
-            <input type="submit" name="submit" value="Make Payment" required>
+            <input type="submit" class="btn btn-primary" name="submit" value="Make Payment" required>
         </div>
     </form>
+    </div>
     <hr>
     <!--footr start-->
     <footr>
