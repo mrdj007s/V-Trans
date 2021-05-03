@@ -84,16 +84,16 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/vehicle">Book Vehicle</a>
+              <a class="nav-link active" aria-current="page" href="/vehicle/">Book Vehicle</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/blog">Blog</a>
+              <a class="nav-link active" aria-current="page" href="/blog/">Blog</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/about">About Us</a>
+              <a class="nav-link active" aria-current="page" href="/about/">About Us</a>
             </li>
           </ul>
           
@@ -187,8 +187,8 @@
         </div>
       </div>
     </nav>
-    <hr>
-    <strong>Welcome {useremail}</strong>
+    <!--<hr>
+    <strong>Welcome {useremail}</strong>-->
     <hr>
   </header>
 
@@ -570,11 +570,11 @@
               <div class="contact">
                 <h3>Services</h3>
                 <ul class="lik">
-                  <li> <a href="/vehicle"> Full Load Services</a></li>
+                  <li> <a href="{% url 'checkfare' %}"> Full Load Services</a></li>
                   <li> <a href="#">Transparent Pricing</a></li>
-                  <li> <a href="/vehicle">Advance Booking</a></li>
+                  <li> <a href="{% url 'vehicle' %}">Advance Booking</a></li>
                   <li> <a href="#">Quick & Easy Portal</a></li>
-                  <li> <a href="/about">Trusted Services</a></li>
+                  <li> <a href="{% url 'about' %}">Trusted Services</a></li>
                 </ul>
               </div>
             </div>
@@ -586,7 +586,7 @@
                   <li> <a href="{% url 'privacy' %}">Privacy and policy</a></li>
                   <li> <a href="{% url 'faq' %}">FAQ</a></li>
                   <li> <a href="{% url 'payterms' %}">Online payment terms</a></li>
-                  <li> <a href="/about">Technical support</a></li>
+                  <li> <a href="{% url 'about' %}">Technical support</a></li>
               </div>
             </div>
           </div>

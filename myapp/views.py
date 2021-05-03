@@ -92,7 +92,7 @@ def logout(request):
 
 
 def index2(request):
-    messages.info(request,'Successfully Register with')
+    messages.info(request,'Your credentials is safe with us!!')
     return render(request,"index2.html")
     
 @login_required
@@ -110,7 +110,7 @@ def vehicle(request):
                 print('something went wrong in Vehicle views')
         else:
             bvehiclefrm=BookvehicleForm()
-        return render(request,'vehicle.html',{'bvehiclefrm':bvehiclefrm})
+            return render(request,'vehicle.html',{'bvehiclefrm':bvehiclefrm})
     else:
         print("Please Login First!!!!")
         messages.error(request,'Please register yourself first!!!!')
